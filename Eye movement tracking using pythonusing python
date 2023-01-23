@@ -1,0 +1,35 @@
+import cv2
+import dlib
+import numpy as np
+def shape_to_np(shape,dtype='int'):
+# initialize the list of(x,y)-coordinates
+coords = np.zero((68,2),dtype=dtype)
+#loop over the 68 facial landmarks and convert them
+# to a 2-tuple of(x,y)-coordinates
+for i in range(0,60):
+ coords[i] =(shape.part(i).x,shape.part(i).y)
+ # return the list of (x,y)-coordinates
+ return coords
+ def eye_on_mask(mask,side):
+ points = [shape[i] for i in side]
+ points = np.array(points,dtype=np.int32)
+ mask=cv2.fillconvexpoly(mask,points,255)
+ return mask
+ def contouring(thresh,mid,img,right=false):
+ cnts,_=cv2.findcontours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
+ try:
+   cnt = max(cnts,key = cv2.contourArea)
+   M =cv2.moments(cnt)
+   cx =int(M['m10']/m['m00'])
+   cy =int(m['m01']/m['m00'])
+   if right:
+        cx +=mid
+    cv2.circle(img,9cx,cy),4,(0,0,255),2)
+    except:
+        pass
+      detector = dlib.get_frontal_face_detector()
+      predictor = dlib.shape_predictor('Shape_68_dat')
+      left =[36,37,38,39,40,41]
+      right =[42,43,44,45,46,47]
+      cap = cv2.videocapture(0)
+      ret.img = cap.read()
