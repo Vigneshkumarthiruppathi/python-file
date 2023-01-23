@@ -1,0 +1,20 @@
+import argparse
+import os
+import platform
+from multiprocessing import set_start_method
+import cv2
+import torch
+import utils
+from uv_inpainting import uvInpainting
+def get_args():
+parser = argparse.Argumentparser()
+parser.add_argument('-n','--name',type=str,default='celeba_hq,help='dataset name')
+parser.add_argument('-s','--suffix',type=str,default='celeba_hq',help='dataset name')
+parser.add_argument('-s','--suffix',type=str,default = demo,
+parser.add_argument('-f','--face_model',type=str,default='230', choices=['230'],help=which NSN model is used')
+parser.add_argument('-b','--bfm_version',type=str,default='face',choices=['face','head'],help='which BFM model is used')
+parser.add_argument('-m','mode',type=str,default='test',help='train or test')
+parser.add_argument('-c','--cpu',default=false, action='store_true',help='enable debug mode')
+parser.add_argument('-is','--im_size',type=int,default=512, help ='image size')
+parser.add_argument('-us','--uv_size',type=int,default=1024,help='image size')
+parser.add_argument('-rt','--root_dir',type=str,default='D:\\codes\\uv_'inpainting',help='root dir')
