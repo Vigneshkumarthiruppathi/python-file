@@ -1,0 +1,36 @@
+#pandas
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df.to_string())
+
+#json
+import pandas as pd
+df = pd.read_json('data.json')
+print(pd.read_json)
+
+import pandas as pd
+a = [1,2,4]
+myvar = pd.series(a)
+print(myvar)
+
+for count, value in enumerate(values):
+    print(count,value)
+    
+df = pd.Dataframe ({"name":['vicky','gayathri'],
+'mask':['blue','green'],
+'weapon':['knife','gun']})
+df.to_csv(index=false)
+
+import json
+x='{"name":"john","age":30,"city":"newyork"}'
+y= json.loads(x)
+print(y['age'])
+
+import pandas as pd
+name = ["vicky","sakthi","gayathri"]
+degre=["MBA","BE","MBBS"]
+scr=[90,80,70]
+my_dict = {'name':name,'degree':degre,'score':scr}
+df = pd.Dataframe(my_dict)
+df.to_csv('file1.csv')
+print(df)
