@@ -1,0 +1,37 @@
+ import os
+ import cv2
+ import numpy as np
+ #Encoding and split data into Train/Test sets
+ from sklearn.preprocessing import labelEncoder
+ from tensorflow.keras.utills import to_categorical
+ from sklearn.model_selection import train_test_split
+ #Tensorflow keras CNN Model
+ from tensorflow.keras.model import sequential
+ from tensorflow.keras.layers import Dense,Dropout,Flatten Activation,conv2D,Maxpooling2D
+ from tensorflow.keras.preprocessing.image import ImageDataGenerator
+ from tensorflow.heras.optimizer import Adam,SGO,Adadelta,RMSprop
+ #plot Images
+ import Matplotlib.pylot as plt
+ folder_dir = 'dataset path'
+ data = []
+ label =[]
+ SIZE = 128 #cropthe image to 128*128
+ for folder in os.listdir(folder_dir):
+   for file in os.listdir(os.path.join(folder_dir,folder):
+   if file.endswitch("jpg"):
+   label.append(folder)
+   img = cv2.imread(os.path.join(folder_dir,folder,file))
+   img_rgb = cv2.resize(img_rgb,(size,size))
+   data.append(im)
+   else:
+       continue
+   #now let's convert the data into numerical values:
+   data_arr = np.array(data)
+   label_arr = np.array(label)
+   #now let's use the label encoder and normalize the data:
+   encoder = LabelEncoder()
+   y = encoder.fit_transform(label_arr)
+   y =to_categoricaly(y,s)
+   X = data_arr/255
+   # The next step is to split the dataset into  80% training and 20% test sets:
+   
