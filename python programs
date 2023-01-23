@@ -1,0 +1,172 @@
+#list to string
+def str(self):
+    list1=['vicky',30, 'gayathri']
+    string1=str(list1)
+    print(string1)
+    print(type(string1))
+    
+#list to string using list comprehention
+def comp(self):
+    list1 = ['hi','welcome',20,'hello']
+    list2 = ['i','am','fine']
+    string1 ="".join([str(value) for val in list1])
+    string2 ="".join([str(value) for val in list2])
+    print(string1)
+    print(type(string1))
+    print(string2)
+    print(type(string2))
+    
+#list to tuple
+def tup(self):
+    list1=['vicky',30,'gayathri']
+    tuple1=tuple(list1)
+    print(tuple1)
+    
+#list to set
+def set(self):
+    set1=['vicky',30,'gayathri']
+    set1=set(list1)
+    print(set1)
+    
+#integer to string
+def int(self):
+    val = 1,2,3
+    txt = str(val)
+    print(txt)
+    print(type(txt))
+    
+#string slice
+def slice(self):
+    a = 'he is a boy'
+    print(a[6:1])
+    
+#program to check is digit or not
+def isd(self):
+    a="0123456789"
+    print(a.isdigit())
+    
+#program to check lowercase of uppercase
+def case(self):
+    a="uppercase"
+    b="lowercase"
+    print(a.upper())
+    print(b.lower())
+    
+#program to merge 2 dictionaries
+def dict(self):
+    a={'a':2,'b':3,'c':4}
+    b={'d':4,'e':5,'f':6}
+    c={**a,**b}
+    print(c)
+    
+#program to write file and read a file
+def file(self):
+    a=open("testfile.txt","w")
+    a.write("this a new i am writing content in it")
+    a.close()
+    b=("testfile.txt,"r")
+    print(b.read())
+
+#program to convert 2 list into a dictionary
+def conv(self):
+    a=[1,2,3,4]
+    food=['parotta','chicken','biryani','idly']
+    dictionary=dict(zip(a,food))
+    print(dictionary)
+    
+#program to remove duplicate element in list
+def rem(self):
+    a=[1,2,3,4,6,7,3,2,1]
+    b=list(set(a))
+    print(list)
+    
+#simple example program for if else elif
+def pro(self):
+    if a>5:
+        print("a is greater than 5")
+    elif a==5:
+        print("no")
+    else:
+        print("number not valid")
+        
+#program to concate 2 list using extend
+def ext(self):
+    a=[11,12,13,14]
+    b=[15,16,17,18]
+    b.extend(a)
+    print(b)
+    
+#program to concate 2 list using operators
+def opr(self):
+    a=[1,2,3,4]
+    b=[5,6,7,8]
+    c=a+b
+    print(c)
+    
+#pattern program
+def pat(self):
+    a=['1','22','333','4444']
+    print(*a,sep="\n")
+    
+#Datetime
+#program to get current Datetime
+def dat(self):
+    from datetime import Datetime
+    now=datetime.now()
+    a=now.strftime("%d":%H:%M:%s)
+    print(a)
+    
+#program to find list difference
+def diff(self):
+    a=[1,2,3,4,5,9]
+    b=[1,2,3,5,7,10]
+    difference=list(set(a)-set(b))
+    print(difference)
+    
+#program to check list length
+def len(self):
+    a=[1,4,7,8,0,9]
+    print(len(a))
+    
+#program to print list in reverse order
+def rev(self):
+    a=[5,6,7,8,9]
+    a.reverse()
+    print(a)
+    
+#program to find item with specified letter in list
+def fin(self):
+    a=[10,8,9,7,6,5,3,1]
+    v=min(a)
+    x=maX(a)
+    print("smallest number:",v)
+    print("largest number:",x)
+    
+#program using enumerate in list
+def enu(self):
+    a=["java","python","c","php","html"]
+    b=enumerate(a)
+    print(list(b))
+    
+#program using to remove a tuple item
+def remo(self):
+    a=(1,2,3,4,5,6,7)
+    b=list(a)
+    b.remove(3)
+    a=tuple(b)
+    print(a)
+    
+#program to reverse a tuple
+def reve(self):
+    a=(1,2,3,4,5)
+    b=reversed(a)
+    print(tuple(b))
+    
+#program to iterate set items
+def ite(self):
+    a={1,2,3,4,5,6}
+    for v in  a:
+        print(v)
+    
+    
+
