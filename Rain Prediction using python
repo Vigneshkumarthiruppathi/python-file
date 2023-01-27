@@ -1,0 +1,30 @@
+import pandas as pd
+import pandas as np
+import math
+import sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error,r2_score,mean_absolute_error
+import matplotlib.pyplot as plt
+import seaborn as sb
+from sklearn import preprocessing
+data=pd.read_csv("rainfall.csv")
+print("Data heads:")
+print(data.head())
+print("Null values in the dataset before preprocessing")
+print(data.isnull().sum())
+print("filling null value values with mean of that particular column")
+data=data.filling(np.mean(data))
+print("Mean of data:")
+print(np.mean(data))
+print("Null values in the dataset after preprocessing")
+print(data.isnull().sum())
+print("\n\nshape:",data.shape)
+print("Info:")
+print("Group by:")
+data.groupby('SUBDIVISION').size()
+print("Co-variance=",data.cov())
+print("Co-Relation=",data.corr())
+corr_cols=data.corr()['ANNUAL'].sort_values()[::-1]
+print("Index of correlation column:",corr_cols.index)
+print("scatter plot of annual and january attribution")
+plit.scatter(data.ANNUAL,data.jan)
