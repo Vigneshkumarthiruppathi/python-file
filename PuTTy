@@ -1,0 +1,21 @@
+Install putty on ubuntu:
+1.putty is running out.
+2.putty is installed
+3.putty is installed by 32 bits.
+4.puttygen. RSA and DSA key generator.
+5. verify installation.
+
+
+Work to putty:
+click PuttyApp
+New window is open, putty configuration.
+Enter Host name in putty configuration window.
+To select the connection Type SSH.
+Click SSH,To select Auth.
+To Select the putty file.
+To run the java jar.
+nohup jar/home/ubuntu/crescoworks/ats/Applicant Trackingsystem-0.0.1-SNAPSHOT.jar>/home/ubuntu/ats/app.log&
+Already to process java jar.
+To check the already identified process identify use this command
+Ps aex|grep java.
+kill 121657
